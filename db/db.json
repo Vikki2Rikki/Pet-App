@@ -1,0 +1,97 @@
+{
+  "animals": [
+    {
+      "name": "Lol",
+      "age": 6,
+      "isVaccinated": true,
+      "species": "cat",
+      "id": "H5zyyMXs0gbl72Y0ZNG3V",
+      "createdAt": "2023-09-02T19:06:06.758Z",
+      "updatedAt": "2023-09-07T09:09:46.627Z"
+    },
+    {
+      "name": "Lord",
+      "age": 2,
+      "isVaccinated": false,
+      "species": "dog",
+      "id": "ksqOAjQR6H50de4CWDHDU",
+      "createdAt": "2023-09-02T19:15:22.270Z",
+      "updatedAt": "2023-09-02T19:15:22.270Z"
+    },
+    {
+      "name": "Pers",
+      "age": 3,
+      "isVaccinated": true,
+      "species": "dog",
+      "id": "Vn_1N0hYJ8P0r0p_4m0VH",
+      "createdAt": "2023-09-03T09:47:19.515Z",
+      "updatedAt": "2023-09-03T09:47:19.515Z"
+    },
+    {
+      "name": "Chicha",
+      "age": 1,
+      "isVaccinated": false,
+      "species": "cat",
+      "id": "NJFUFWHtZ2hClj8uWPp5m",
+      "createdAt": "2023-09-03T10:55:11.773Z",
+      "updatedAt": "2023-09-03T10:55:11.773Z"
+    },
+    {
+      "name": "Chicha",
+      "age": 1,
+      "id": "n-HcvhpG5u063zFLsInm9",
+      "createdAt": "2023-09-03T19:05:55.920Z",
+      "updatedAt": "2023-09-03T19:05:55.920Z"
+    },
+    {
+      "name": "Mashka",
+      "age": 2,
+      "isVaccinated": true,
+      "species": "cat",
+      "gender": "femail",
+      "id": "iACmZW8Rotm5Ox3dqDNJg",
+      "createdAt": "2023-09-06T20:19:18.746Z",
+      "updatedAt": "2023-09-06T20:19:18.746Z"
+    },
+    {
+      "name": "Mashka",
+      "age": 2,
+      "isVaccinated": true,
+      "species": "cat",
+      "gender": "femail",
+      "id": "ifeLl3qsctdSMEnWFpSTJ",
+      "createdAt": "2023-09-06T20:32:47.323Z",
+      "updatedAt": "2023-09-06T20:32:47.323Z"
+    },
+    {
+      "name": "Mashka",
+      "age": 2,
+      "isVaccinated": true,
+      "species": "cat",
+      "gender": "femail",
+      "id": "TOGz__i3FA7Oa64ObKaPo",
+      "createdAt": "2023-09-06T20:37:07.651Z",
+      "updatedAt": "2023-09-06T20:37:07.651Z"
+    },
+    {
+      "name": "Mashka",
+      "age": 2,
+      "isVaccinated": true,
+      "species": "cat",
+      "gender": "femail",
+      "id": "_r6TOoGPBwm6PWfLCZmiD",
+      "createdAt": "2023-09-07T10:44:35.080Z",
+      "updatedAt": "2023-09-07T10:44:35.080Z"
+    },
+    {
+      "name": "Mashka",
+      "age": 2,
+      "isVaccinated": true,
+      "species": "cat",
+      "gender": "femail",
+      "id": "eHO4wJyAagi5epvM7MLd-",
+      "createdAt": "2023-09-07T10:46:24.054Z",
+      "updatedAt": "2023-09-07T10:46:24.054Z"
+    }
+  ]
+}
