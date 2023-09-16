@@ -3,8 +3,10 @@ const path = require("path");
 
 const readJSONFromFile = require("../utils/readJSONFromFile");
 const writeJSONToFile = require("../utils/writeJSONToFile");
+const createError = require("../utils/createError");
+const ERROR_TYPES = require("../constants/errors");
 
-const DB_PATH = path.join(__dirname, "/db.json");
+const DB_PATH = path.join(__dirname, "db.json");
 
 const create = async (data) => {
   const animal = {
@@ -21,15 +23,22 @@ const create = async (data) => {
 
 const find = async () => {
   const { animals } = await readJSONFromFile(DB_PATH);
-  return animals;
+
+  return animals.filter((animal) => !animal.deletedAt);
 };
 
 const findOneById = async (id) => {
   const animals = await find();
   const animal = animals.find((animal) => animal.id === id);
-  if (!animal) {
-    throw new Error(`Animal with id ${id} not found`);
+
+  if (!animal || animal.deletedAt) {
+    const error = createError(ERROR_TYPES.NOT_FOUND, {
+      message: `Animal with id ${id} not found`,
+      data: {},
+    });
+    throw error;
   }
+
   return animal;
 };
 
@@ -37,8 +46,12 @@ const update = async (id, payload) => {
   const content = await readJSONFromFile(DB_PATH);
   const animal = await findOneById(id);
 
-  if (!animal) {
-    throw new Error(`Animal with id ${id} not found`);
+  if (!animal || animal.deletedAt) {
+    const error = createError(ERROR_TYPES.NOT_FOUND, {
+      message: `Animal with id ${id} not found`,
+      data: {},
+    });
+    throw error;
   }
 
   const updatedAnimal = {
@@ -56,9 +69,14 @@ const update = async (id, payload) => {
   return updatedAnimal;
 };
 
+const deleteSoft = async (id) => {
+  return update(id, { deletedAt: new Date().toISOString() });
+};
+
 module.exports = {
   create,
   find,
   findOneById,
   update,
+  deleteSoft,
 };

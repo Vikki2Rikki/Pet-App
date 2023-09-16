@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const router = require("./routes");
+const errorHandler = require("./middlewares/errorHandler");
 
 const app = express();
 
@@ -19,7 +20,9 @@ app.get("/", (req, res, next) => {
   res.send("hello world");
 });
 
-const PORT = 5000;
+app.use(errorHandler);
+
+const PORT = 4000;
 
 app.listen(PORT, () => {
   console.log(`app is running on port ${PORT}`);
